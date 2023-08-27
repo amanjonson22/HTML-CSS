@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Flexíveis, áudio, vídeos</title>
+</head>
+<body>
+    <h1>Imagens Flexíveis</h1>
+    <p>Veremos sobre imagens flexíveis. Aprender a gerar imagens de tamanho diferentes e a fazer o navegador carregar a imagem certa para cada situação. Usando as tags <code>&lt;picture&gt;</code> e <code>&lt;source&gt;</code>. Essas imagens serão carregadas pelo navegador de acordo com o tamanho da janela atual. <br>
+    A tag <code>&lt;img&gt;</code> será colocada dentro da tag <code>&lt;picture&gt;</code> que conterá outras fontes de imagem.</p>
+    <picture>
+        <source media="(max-width: 850px)" srcset="imagens/aviao500-1.jpg" type="image/jpg">
+        <source media="(max-width: 1180px)" srcset="imagens/aviao8001.jpg" type="image/jpg">
+        <img src="imagens/aviaoFull1.jpg" alt="Avião decolando">
+    </picture>
+    <h1>Áudio</h1>
+    <p>Com o HTML5, tem uma nova facilidade de compartilhar áudio nos sites sem depender de plugins extras. Basta uma tag <code>&lt;audio&gt;</code> e alguns <code>&lt;source&gt;</code> para fazer o site ser capaz de tocar qualquer áudio.
+    </p>
+    <p>Os principais atributos da tag <code>&lt;audio&gt;</code> são:</p>
+    <ul>
+        <li>O atributo <code>preload</code> indica se o áudio será pré-carregado ou não e aceita três valores:</li>
+        <ul type="circle">
+            <li><code>metadata</code> - carrega apenas as informações sobre o arquivo (tamanho, tempo, informações de direito, etc)</li>
+            <li><code>none</code> - não carrega nada até que o usuário clique no play ou um script inicie a reprodução.</li>
+            <li><code>auto</code> (padrão) - carrega o arquivo inteiro assim que a página carrega, mesmo que o usuário nunca aperte play</li>
+        </ul>
+        <li>O atributo <code>control</code> vai apresentar o player na tela. Caso não seja colocado na tag, o controle será transparente e o usuário não poderá interagir com ele.</li>
+        <li>O atributo <code>autoplay</code>, quando inserido, vai iniciar a reprodução assim que a página for carregada</li>
+        <li>O atributo <code>loop</code> vai fazer com que o áudio seja repetido eternamente assim que terminar sua reprodução</li>
+    </ul>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="audio/just-the-two-of-us.mp3" type="audio/mpeg">
+        <p>Seu navegador não suporta audio <a href="audio/just-the-two-of-us.mp3" download="just-the-two-of-us.mp3" type="audio/mpeg">Download do áudio</a></p>
+    </audio>
+    <h1>Vídeo</h1>
+    <p>Para inserir um vídeo em nosso site, podemos utilizar a nova
+        tag <code>&lt;video&gt;</code> da HTML5, caso o arquivo esteja hospedado no nosso próprio servidor.</p>
+    <p>Atributos importantes da tag <code>video</code></p>
+    <ul>
+        <li><code>width</code> - indica a largura que o vídeo vai ter na tela.</li>
+        <li><code>poster</code> - configura uma imagem que vai aparece como capa enquanto o visitante não aperta play para reproduzir o vídeo.</li>
+        <li><code>controls</code> - configura se os controles vão aparecer na parte inferior da mídia. Por padrão, eles não aparecem, mas basta colocar a palavra control na tag</li>
+        <li><code>autoplay</code> diz para o navegador se o vídeo vai começar a tocar automaticamente, assim que a página for carregada.</li>
+    </ul>
+    <p>Arquivos de vídeos não são tão simples, o formato indica o padrão para abrir e reproduzir a mídia. Vídeos possuem formatos e codecs e isso pode tornar o vídeo inviável de ser reproduzido pela maioria dos navegadores na maioria dos dispositivos. <br>
+    Os formatos suportados são: MPEG, WEBM e OGG. Os dois primeiros são os que possuem maior compatibilidade.</p>
+    <video width="600" poster="imagens/aviao8001.jpg" controls autoplay>
+        <source src="video/just-the-two-of-us.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador não conseguiu carregar o vídeo</p>
+    </video>
+</body>
+</html>
