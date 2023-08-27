@@ -1,6 +1,27 @@
 @charset "UTF-8";
 
 body {
-    background-color: beige;
-    font-size: 14pt;
+    background-color: #a5daf4;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 16pt;
+    text-align: justify;
+}
+
+p#sop-funcao {
+    font-size: 20pt;
+    color: black;
+    font-weight: 700;
+}
+
+h1#titulo1{
+    font-size: 42pt;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 24pt;
+    color: white;
 }
