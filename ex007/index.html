@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HYPERLINKS</h1>
+    <p>Agora vamos aprender a colocar hyperlinks.</p>
+    <h2>O que são?</h2>
+    <p>Permitem que o usuário ligue um ponto a outro na internet. Seja acessando sites ou baixando arquivos, o usuário está interagindo com hyperlinks.</p>
+    <h2>Usando hyperlinks</h2>
+    <p>Para usar um hyperlink, usa-se &lt;a&gt;. O principal atributo dessa tag é o <em>href</em></p>
+    <a href="https://github.com/amanjonson22">Acesse meu perfil do github</a>
+    <p>Outro atributo útil é o hreflang, que indica qual o idioma principal do site para onde o link redireciona. Isso permite avisar o navegador e softwares como lidar caso o visitante opte por traduzir os conteúdos.</p>
+    <a href="https://uwaterloo.ca" hreflang="en">Site da Universidade de Waterloo (em inglês)</a>
+    <p>Por padrão, quando se clica em um hyperlink, o site é aberto na mesma página que o usuário estava, ou seja, o conteúdo vai deixar de ser exibido. <br>
+    É um comportamento desejado quando o visitante se mantém no site, apenas mudando de um doc para outro. Para controlar para onde ele vai, pode-se usar o atributo <em>target</em>, que suporta os seguintes valores:</p>
+    <ul>
+        <li>_blank - abre em uma nova janela em branco</li>
+        <li>_self - abre na página atual (padrão)</li>
+        <li>_top - desfaz todos os frames e abre no navegador completo</li>
+        <li>_parent - similar ao _top, faz referência à uma janela mãe.</li>
+        <li>nome-do-frame - caso esteja usando frames, indica o nome da janela a abrir.</li>
+    </ul>
+    <a href="pagina2.html" target="_blank">Página 2</a> <br>
+    <a href="pagina3.html" target="_self">Página 3</a>
+    <h2>Downloads</h2>
+    <p>Basta fazer o link diretamente para o arquivo que se deseja efetuar o download e adicionar o atributo <em>download</em> com o valor configurado para o nome do arquivo a ser baixado e o atributo <em></em> para indicar ao navegador que tipo de arquivo está sendo baixado.</p>
+    <a href="doc/ManualDeOperacoes.pdf" download="ManualDeOperacoes" type="application/pdf">Baixe aqui o Manual de Operações do Montaer MC01</a> <br>
+    <a href="doc/ExteriorWalkaroundNormalChecklist.pdf" download="ExteriorWalkaroundNormalChecklist" type="application/pdf">Baixe aqui o Exterior Checklist do Montaer MC01</a>
+</body>
+</html>
